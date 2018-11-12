@@ -47,11 +47,11 @@
     <table class="table table-sm table-hover mt-2">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Price (Eur.)</th>
-            <th scope="col"></th>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price (Eur.)</th>
+            <th>Image</th>
         </tr>
         </thead>
         <tbody>
@@ -61,6 +61,9 @@
                 <td><?= $product['title'] ?></td>
                 <td><?= $product['description'] ?></td>
                 <td><?= $product['price'] ?></td>
+                <td>
+                    <img alt="<?= $product['title'] ?>" height="50px" src="product_images/<?= $product['image'] ?>">
+                </td>
                 <td class="text-right"><a class="btn btn-sm btn-danger" href="admin.php?delete=<?= $product['id'] ?>">Delete</a>
                 </td>
             </tr>
@@ -93,13 +96,15 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="admin.php">
+                <form method="post" action="admin.php" enctype="multipart/form-data">
                     <label>Title</label>
                     <input type="text" class="form-control" name="title">
                     <label>Description</label>
                     <textarea type="text" class="form-control" name="description"></textarea>
                     <label>Price</label>
                     <input type="text" class="form-control" name="price">
+                    <label>Image</label>
+                    <input type="file" name="image">
                     <button type="submit" name="submit" class="btn btn-sm btn-primary btn-block mt-2">Add</button>
                 </form>
             </div>

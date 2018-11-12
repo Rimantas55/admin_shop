@@ -23,9 +23,17 @@ if ( isset($_GET['delete']) && !empty($_GET['delete']) ) {
 }
 // Adding a product
 if ( isset($_POST['submit'])) {
-    $query = $conn->prepare("INSERT INTO products (title,description,price) VALUES (:title, :description, :price)");
-    unset($_POST['submit']);
-    $query->execute($_POST);
+    if (!empty($_FILES['image'])) {
+        $file_name = time() . "_" . $_FILES['image']['name'];
+        move_uploaded_file($_FILES['image']["tmp_name"], 'product_images/' . $file_name);
+    }
+    $query = $conn->prepare("INSERT INTO products (title,description,price,image) VALUES (:title, :description, :price, :image)");
+    $query->execute([
+        'title' => $_POST['title'],
+        'description' => $_POST['description'],
+        'price' => $_POST['price'],
+        'image' => $file_name
+    ]);
 }
 // Getting all products from the database
 $query = $conn->prepare("SELECT * FROM products");

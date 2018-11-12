@@ -1,0 +1,30 @@
+.box {
+	max-width: 200px;
+
+	float: left;
+	margin: 10px;
+}
+.box_image {
+
+}
+.box_body {
+
+}
+.box_footer {
+
+}/*
+<div class="row">
+			<?php foreach ($products as $product) { ?>
+				<div class="col-md-3">
+					<div class="card">
+						<img class="card-img-top" alt="<?= $product['title'] ?>" src="product_images/<?= $product['image'] ?>" > 
+						<div class="card-body">
+							<h5 class="card-title"><?= $product['title'] ?></h5>
+							<p class="card-text"><?= $product['description'] ?></p>
+							<p class="card-text"><small class="text-muted"><?= $product['price'] ?></small></p>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		-*
