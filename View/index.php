@@ -39,24 +39,23 @@
 		</div>
 
 		<!--Bootsrtap cards-->
-		
-		
-		<?php foreach ($products as $product) { ?>
-			
-			<div class="box">
-				<div class="box_image">
-					<img class="card-img-top" alt="<?= $product['title'] ?>" src="product_images/<?= $product['image'] ?>" >
-				</div>
-				<div class="box_body">
-					<?= $product['description'] ?>
-				</div>
-				<div class="box_footer">
-					<?= $product['price'] ?>
+		<div class="div_all_image">
+				
+			<?php foreach ($products as $product) { ?>
+				<div class="card_box">	
+					<div class="box_image">
+						<img class="card-img-top" alt="<?= $product['title'] ?>" src="product_images/<?= $product['image'] ?>" >
+					</div>
+					<div class="box_body">
+						<?= $product['description'] ?>
+					</div>
+					<div class="box_footer">
+						<?= $product['price'] ?>
+					</div>	
 				</div>
 			</div>
-			
-			
-	</div>	
+		</div>
+
 	<?php } ?>
 
 	<!-- Optional JavaScript -->

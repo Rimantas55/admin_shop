@@ -1,7 +1,9 @@
-.box {
-	max-width: 200px;
+.card_box {
+	/*max-width: 200%;*/
+	width: 200px;
 
 	float: left;
+	/*display: inline-block;*/
 	margin: 10px;
 }
 .box_image {
@@ -12,7 +14,15 @@
 }
 .box_footer {
 
-}/*
+}
+.div_all_image {
+	border: 1px solid red;
+	background-color: yellow;
+	padding: 50px;
+}
+
+
+/*
 <div class="row">
 			<?php foreach ($products as $product) { ?>
 				<div class="col-md-3">
