@@ -38,6 +38,27 @@
 			</div>
 		</div>
 
+<div class="row">
+			
+			<?php foreach ($products as $product) { ?>
+
+				<div class='col-md-3 col-sm-6'>
+						<div class='card text-center mt-1'> 
+							<div class='card-block'>
+								<img class="card-img-top" alt="<?= $product['title'] ?>" src="product_images/<?= $product['image'] ?>" >
+									<div class='card-title'>
+										<h4><?php echo $product['title'] ?></h4>
+									</div>
+									<div class='card-text'><?= $product['description'] ?></div>
+								</div>
+							</div>				
+						</div>
+					<?php }	?>
+		</div>
+
+
+
+
 		<!--Bootsrtap cards-->
 		<div class="div_all_image">
 				
@@ -57,6 +78,14 @@
 		</div>
 
 	<?php } ?>
+
+
+		</div>
+
+
+
+
+
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
