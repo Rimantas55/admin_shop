@@ -56,7 +56,7 @@
 					<?php }	?>
 		</div>
 
-
+<!--crop tool reikia kontroliai nuotrauku ikelimams-->
 
 
 		<!--Bootsrtap cards-->
